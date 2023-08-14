@@ -4,6 +4,6 @@ import com.asoom.data.remote.ApiService
 import com.asoom.domain.entity.CategoryResponse
 import com.asoom.domain.repo.MealsRepo
 
-class MealsRepoIMP(private  val apiService: ApiService):MealsRepo{
+class MealsRepoIMP(private val apiService: ApiService):MealsRepo{
     override fun getMealzFromRemote(): CategoryResponse = apiService.getMeals()
 }
