@@ -1,4 +1,4 @@
-package com.Asoom.mealz
+package com.asoom.mealz
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

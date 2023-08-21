@@ -1,7 +1,8 @@
-package com.Asoom.mealz.di
+package com.asoom.mealz.di
 
+import com.asoom.data.remote.ApiService
+import com.asoom.data.repo.MealsRepoIMP
 import com.asoom.domain.repo.MealsRepo
-import com.asoom.domain.usecase.getMealz
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -9,11 +10,9 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-object UseCaseModule {
+class RepoModule {
     @Provides
-    fun provideuseCaseModule(mealsRepo: MealsRepo): getMealz{
-        return getMealz(mealsRepo)
-
+    fun provideRepo(apiService: ApiService):MealsRepo{
+        return MealsRepoIMP(apiService)
     }
-
 }

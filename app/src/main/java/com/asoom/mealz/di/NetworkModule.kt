@@ -1,4 +1,4 @@
-package com.Asoom.mealz.di
+package com.asoom.mealz.di
 
 import com.asoom.data.remote.ApiService
 import dagger.Module
